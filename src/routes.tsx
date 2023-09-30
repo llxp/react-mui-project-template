@@ -1,12 +1,5 @@
+import NavItem from "./nav-item";
 import Home from "./pages/home";
-// import react-router-dom types
-import { PathRouteProps } from "react-router-dom";
-
-export interface NavItem extends PathRouteProps {
-    title: string;
-    showInHeader?: boolean;
-    showInDrawer?: boolean;
-}
 
 const routes = [
     {

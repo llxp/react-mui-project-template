@@ -5,9 +5,8 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Typography from "@mui/material/Typography";
-import { NavItem } from "../../routes";
+import NavItem from "../../nav-item";
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 
 export interface DrawerContentProps {
   // handle drawer toggle
@@ -20,10 +19,9 @@ export interface DrawerContentProps {
 
 export default function DrawerContent(props: DrawerContentProps) {
   const { handleDrawerToggle, navItems } = props;
-  const { t } = useTranslation();
   return <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
     <Typography variant="h6" sx={{ my: 2 }}>
-      {t(props.title)}
+      {props.title}
     </Typography>
     <Divider />
     <List>
