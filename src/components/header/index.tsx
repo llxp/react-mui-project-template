@@ -9,7 +9,7 @@ import * as React from "react";
 import DrawerContent from "./drawer-content";
 import Drawer from "@mui/material/Drawer";
 import { useTranslation } from "react-i18next";
-import routes from "../../routes";
+import routes, { NavItem } from "../../routes";
 import { Link, useLocation } from "react-router-dom";
 import ThemeSelector from "./theme-selector";
 
@@ -59,7 +59,7 @@ export default function ButtonAppBar(props: ButtonAppBarProps) {
                 {t(props.title)}
             </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {routes.map((item) => (
+            {routes.filter((route: NavItem) => route.showInHeader).map((item) => (
               <Button key={item.title} sx={{ color: '#fff' }} component={Link} to={item.path || ""}>
                 {t(item.title)}
               </Button>
@@ -81,7 +81,7 @@ export default function ButtonAppBar(props: ButtonAppBarProps) {
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >
-          <DrawerContent handleDrawerToggle={handleDrawerToggle} navItems={routes} title={currentPath?.title || ""}/>
+          <DrawerContent handleDrawerToggle={handleDrawerToggle} navItems={routes.filter((route: NavItem) => route.showInDrawer)} title={currentPath?.title || ""}/>
         </Drawer>
       </nav>
       <Box component="main">

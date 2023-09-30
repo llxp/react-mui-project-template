@@ -1,8 +1,8 @@
 // these are the main translation strings for the english language
 export default {
-    "Home": "Home",
-    "About": "About",
-    "Contact": "Contact",
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
 
     "Welcome to React": "Welcome to React and react-i18next",
     "Orderportal": "Orderportal",

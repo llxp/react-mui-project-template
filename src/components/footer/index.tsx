@@ -25,20 +25,17 @@ export default function StickyFooter() {
 >
       <Toolbar>
         {/*
-        The footer contains a left text and a right text. The right text is aligned to the right with the flexGrow, while the left text is aligned to the left.
+        The footer contains a left text and a right text. The right part is aligned to the right with the flexGrow, while the left part is aligned to the left.
         */}
         <Copyright />
         <Box sx={{ flexGrow: 1 }} />
-        {/*
-        The right part of the footer contains some buttons with links to the source code and the documentation.
-        */}
-        <CustomIconButton aria-label="privacy" link="https://mui.com">
+        <CustomIconButton label="privacy" link="https://mui.com">
           <ShieldIcon />
         </CustomIconButton>
-        <CustomIconButton aria-label="help" link="https://mui.com">
+        <CustomIconButton label="help" link="https://mui.com">
           <HelpIcon />
         </CustomIconButton>
-        <CustomIconButton aria-label="github" link="https://github.com">
+        <CustomIconButton label="github" link="https://github.com">
           <FontAwesomeIcon icon={faGithub} />
         </CustomIconButton>
       </Toolbar>
