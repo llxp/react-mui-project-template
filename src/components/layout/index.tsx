@@ -1,5 +1,4 @@
 import CssBaseline from "@mui/material/CssBaseline";
-import React from "react";
 import Header from "../header";
 import createTheme from "@mui/material/styles/createTheme";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
@@ -13,7 +12,7 @@ export default function Layout() {
     const defaultTheme = createTheme(getTheme(currentMode));
     return <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
-      <Header title={"Orderportal"}>
+      <Header title={"platform"}>
         <MainContent />
       </Header>
       <Footer />

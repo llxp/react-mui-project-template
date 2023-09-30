@@ -5,11 +5,9 @@ export default {
     "contact": "Kontakt",
 
     "Welcome to React": "Willkommen bei React und react-i18next",
-    "Orderportal": "Bestellportal",
+    "platform": "Plattform",
     "count": "Zählen",
     "reset": "Zurücksetzen",
 
-    "footerLeft": "Dies ist der Footer auf der linken Seite",
-    "footerRight": "Dies ist der Footer auf der rechten Seite",
-    "copyright": "© Bestellportal",
+    "copyright": "© Plattform",
 };

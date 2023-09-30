@@ -1,5 +1,7 @@
 import { ThemeOptions } from '@mui/material/styles';
 
+// The themes are created using the mui theme creator: https://zenoo.github.io/mui-theme-creator
+
 export const lightTheme: ThemeOptions = {
   palette: {
     mode: 'light',
@@ -25,7 +27,7 @@ export const darkTheme: ThemeOptions = {
 };
 
 // export either lightTheme or darkTheme depending on the current theme mode
-export default function theme(mode: string) {
+export default function getTheme(mode: string) {
   switch (mode) {
     case 'dark':
       return darkTheme;
