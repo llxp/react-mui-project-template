@@ -5,7 +5,7 @@ import MobileDrawer from "./mobile-drawer";
 
 export interface HeaderProps {
     title: string;
-    routes?: NavItem[];
+    routes: NavItem[];
 }
 
 export default function Header(props: HeaderProps) {
@@ -18,8 +18,8 @@ export default function Header(props: HeaderProps) {
 
   return (
     <React.Fragment>
-      <DesktopHeader handleDrawerToggle={handleDrawerToggle} routes={routes || []} title={title}/>
-      <MobileDrawer mobileOpen={mobileOpen} handleDrawerToggle={handleDrawerToggle} routes={routes || []}/>
+      <DesktopHeader handleDrawerToggle={handleDrawerToggle} routes={routes} title={title}/>
+      <MobileDrawer mobileOpen={mobileOpen} handleDrawerToggle={handleDrawerToggle} routes={routes}/>
     </React.Fragment>
   );
 }

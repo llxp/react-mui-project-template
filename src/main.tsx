@@ -15,7 +15,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    children: routes as RouteObject[],
+    children: routes.filter((route) => route.path) as RouteObject[],
   },
 ]);
 

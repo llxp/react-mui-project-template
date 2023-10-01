@@ -12,8 +12,9 @@ export default function FooterButtons(props: FooterButtonsProps) {
       {links.filter((item) => item.showInFooter).map((link) => (
         <CustomIconButton
           label={link.label || ""}
-          link={link.path || ""}
+          link={link.link || link.path || ""}
           key={link.label}
+          target={link.link ? "_blank" : undefined}
         >
           {link.icon}
         </CustomIconButton>

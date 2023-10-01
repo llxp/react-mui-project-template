@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const routes = [
+    // header links
     {
         path: '/',
         element: <Home />,
@@ -27,6 +28,7 @@ const routes = [
         showInHeader: true,
         showInDrawer: true,
     },
+    // footer links displayed as buttons
     {
         label: "privacy",
         link: "https://mui.com",

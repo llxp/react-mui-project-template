@@ -2,11 +2,19 @@
 
 This project template was bootstrapped with [Vite](https://vitejs.dev/).
 It features the following libraries:
+Main framework:
 - [React](https://reactjs.org/)
+UI Framework (Material-UI):
 - [MUI](https://mui.com/)
+Client-side routing:
 - [React Router Dom](https://reactrouter.com/web/guides/quick-start)
+State management:
 - [Zustand](https://github.com/pmndrs/zustand)
+Internationalization:
 - [i18next](https://www.i18next.com/)
+Testing:
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+- [Vitest](https://vitest.dev/)
 
 ## Project Layout
 
@@ -27,6 +35,7 @@ It features the following libraries:
 │   │   ├── footer
 │   │   │   ├── copyright.tsx
 │   │   │   ├── custom-icon-button.tsx
+│   │   │   ├── footer-buttons.tsx
 │   │   │   └── index.tsx
 │   │   ├── header
 │   │   │   ├── desktop-header.tsx
@@ -41,7 +50,8 @@ It features the following libraries:
 │   │   │   ├── layout.spec.tsx
 │   │   │   └── mui.tsx
 │   │   └── main
-│   │       └── index.tsx
+│   │       ├── index.tsx
+│   │       └── main.spec.tsx
 │   ├── i18n
 │   │   ├── de
 │   │   │   ├── index.ts
