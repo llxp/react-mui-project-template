@@ -21,7 +21,7 @@ export default function Layout() {
         <Toolbar />
         <MainContent />
       </Box>
-      <Footer routes={routesTranslated}/>
+      <Footer routes={routesTranslated} copyright={t("platform")} copyrightLink="https://mui.com"/>
     </MUI>
   );
 }

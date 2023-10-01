@@ -12,10 +12,12 @@ export interface FooterLink {
 
 export interface FooterProps {
   routes: NavItem[];
+  copyright: string;
+  copyrightLink: string;
 }
 
 export default function Footer(props: FooterProps) {
-  const { routes } = props;
+  const { routes, copyright, copyrightLink } = props;
 
   return (
     <Box
@@ -34,7 +36,7 @@ export default function Footer(props: FooterProps) {
       }}
     >
       <Toolbar>
-        <Copyright />
+        <Copyright copyright={copyright} link={copyrightLink}/>
         <Box sx={{ flexGrow: 1 }} />{/* push the buttons to the right */}
         <FooterButtons links={routes} />
       </Toolbar>
