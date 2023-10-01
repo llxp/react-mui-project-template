@@ -13,7 +13,7 @@ export const useThemeStore = create<ThemeState>()(
   devtools(
     persist(
       (set) => ({
-        currentMode: "dark",
+        currentMode: "light",
         toggleMode: () => set((state) => ({ currentMode: state.currentMode === "dark" ? "light" : "dark" })),
       }),
       { name: 'bear-storage' }
