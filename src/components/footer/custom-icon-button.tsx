@@ -9,21 +9,23 @@ export interface CustomIconButtonProps {
 
 export default function CustomIconButton(props: CustomIconButtonProps) {
   const { label, link, children } = props;
-  return <Tooltip title={label}>
-    <IconButton
-      aria-label={props.label}
-      sx={{
-        // filled
-        backgroundColor: "primary.main",
-        color: "primary.contrastText",
-        '&:hover': {
-          backgroundColor: "primary.dark",
-        },
-      }}
-      href={link}
-      component="a"
-    >
-      {children}
-    </IconButton>
-  </Tooltip>
+  return (
+    <Tooltip title={label}>
+      <IconButton
+        aria-label={props.label}
+        sx={{
+          // filled
+          backgroundColor: "primary.main",
+          color: "primary.contrastText",
+          '&:hover': {
+            backgroundColor: "primary.dark",
+          },
+        }}
+        href={link}
+        component="a"
+      >
+        {children}
+      </IconButton>
+    </Tooltip>
+  );
 }

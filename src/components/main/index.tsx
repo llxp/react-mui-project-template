@@ -4,24 +4,27 @@ import Container from "@mui/material/Container";
 import { Outlet } from "react-router-dom";
 
 export default function MainContent() {
-  return <Box sx={{
-    flexGrow: 1,
-    minWidth: "100%",
-    flexDirection: "column",
-    display: "flex",
-    justifyContent: "center",
-    background: "linear-gradient(45deg, #9013FE 15%, #50E3C2 90%)",
-  }}>
-    <Container sx={{
-      minHeight: "calc(100vh - 64px)",
+  return (
+    <Box sx={{
+      flexGrow: 1,
+      minWidth: "100%",
+      flexDirection: "column",
+      display: "flex",
+      justifyContent: "center",
+      background: "linear-gradient(45deg, #9013FE 15%, #50E3C2 90%)",
     }}>
-      <Card sx={{
-        minHeight: "calc((100vh - 64px) / 1.5)",
-        mt: 8,
-        mx: "auto",
+      <Container sx={{
+        minHeight: "calc(100vh - 64px)",
       }}>
-        <Outlet />
-      </Card>
-    </Container>
-  </Box>
+        <Card sx={{
+          minHeight: "calc((100vh - 64px) / 1.5)",
+          mt: 8,
+          mx: "auto",
+        }}>
+          {/* display the react-router-dom current route here */}
+          <Outlet />
+        </Card>
+      </Container>
+    </Box>
+  );
 }

@@ -28,13 +28,15 @@ export default function Home() {
   const increase = useBearStore((state) => state.increase)
   const reset = useBearStore((state) => () => state.reset())
   const bears = useBearStore((state) => state.bears)
-  return <div>
-    <h1>Content</h1>
-    <Button onClick={() => increase(1)} variant="contained">
-    {t("count")} {bears}
-    </Button>
-    <Button onClick={() => reset()} variant="outlined" color="error">
-    {t("reset")}
-    </Button>
-  </div>
+  return (
+    <div>
+      <h1>Content</h1>
+      <Button onClick={() => increase(1)} variant="contained">
+      {t("count")} {bears}
+      </Button>
+      <Button onClick={() => reset()} variant="outlined" color="error">
+      {t("reset")}
+      </Button>
+    </div>
+  );
 }

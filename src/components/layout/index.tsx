@@ -4,6 +4,8 @@ import MainContent from "../main";
 import MUI from "./mui";
 import { useTranslation } from "react-i18next";
 import routes from "../../routes";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
 
 export default function Layout() {
   const { t } = useTranslation();
@@ -11,10 +13,15 @@ export default function Layout() {
     ...route,
     title: t(route.title),
   }));
-  return <MUI>
-    <Header title={t("platform")} routes={routesTranslated}>
-      <MainContent />
-    </Header>
-    <Footer />
-  </MUI>
+
+  return (
+    <MUI>
+      <Header title={t("platform")} routes={routesTranslated} />
+      <Box component="main">
+        <Toolbar />
+        <MainContent />
+      </Box>
+      <Footer routes={routesTranslated}/>
+    </MUI>
+  );
 }

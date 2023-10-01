@@ -18,39 +18,47 @@ It features the following libraries:
 ├── package-lock.json
 ├── package.json
 ├── public
-│   └── vite.svg
+│   └── vite.svg
 ├── src
-│   ├── App.tsx
-│   ├── assets
-│   │   └── react.svg
-│   ├── components
-│   │   ├── footer
-│   │   │   ├── copyright.tsx
-│   │   │   ├── custom-icon-button.tsx
-│   │   │   └── index.tsx
-│   │   ├── header
-│   │   │   ├── drawer-content.tsx
-│   │   │   ├── index.tsx
-│   │   │   └── theme-selector.tsx
-│   │   ├── layout
-│   │   │   └── index.tsx
-│   │   └── main
-│   │       └── index.tsx
-│   ├── i18n
-│   │   ├── de
-│   │   │   ├── index.ts
-│   │   │   └── main.ts
-│   │   ├── en
-│   │   │   ├── index.ts
-│   │   │   └── main.ts
-│   │   └── index.ts
-│   ├── main.tsx
-│   ├── pages
-│   │   └── home
-│   │       └── index.tsx
-│   ├── routes.tsx
-│   ├── theme.ts
-│   └── vite-env.d.ts
+│   ├── App.tsx
+│   ├── assets
+│   │   └── react.svg
+│   ├── components
+│   │   ├── footer
+│   │   │   ├── copyright.tsx
+│   │   │   ├── custom-icon-button.tsx
+│   │   │   └── index.tsx
+│   │   ├── header
+│   │   │   ├── desktop-header.tsx
+│   │   │   ├── drawer-content.tsx
+│   │   │   ├── header-links.tsx
+│   │   │   ├── header.spec.tsx
+│   │   │   ├── index.tsx
+│   │   │   ├── mobile-drawer.tsx
+│   │   │   └── theme-selector.tsx
+│   │   ├── layout
+│   │   │   ├── index.tsx
+│   │   │   ├── layout.spec.tsx
+│   │   │   └── mui.tsx
+│   │   └── main
+│   │       └── index.tsx
+│   ├── i18n
+│   │   ├── de
+│   │   │   ├── index.ts
+│   │   │   └── main.ts
+│   │   ├── en
+│   │   │   ├── index.ts
+│   │   │   └── main.ts
+│   │   └── index.ts
+│   ├── main.tsx
+│   ├── nav-item.tsx
+│   ├── pages
+│   │   └── home
+│   │       └── index.tsx
+│   ├── routes.tsx
+│   ├── test.ts
+│   ├── theme.ts
+│   └── vite-env.d.ts
 ├── tsconfig.json
 ├── tsconfig.node.json
 └── vite.config.ts

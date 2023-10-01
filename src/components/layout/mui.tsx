@@ -12,8 +12,10 @@ export default function MUI(props: MUIProps) {
   const { children } = props;
   const currentMode = useThemeStore((state) => state.currentMode);
   const theme = createTheme(getTheme(currentMode));
-  return <ThemeProvider theme={theme}>
-  <CssBaseline />
-  {children}
-  </ThemeProvider>;
+  return (
+    <ThemeProvider theme={theme}>
+    <CssBaseline />
+    {children}
+    </ThemeProvider>
+  );
 }

@@ -8,16 +8,18 @@ it('render and test the layout component', () => {
     const router = createBrowserRouter([
       {
         path: '/',
-        element: <Header title="title" routes={[]}><p>Hello World</p></Header>,
-        children: [
+        element: <Header title="title" routes={[
           {
-            path: '/',
-            element: <p>Hello World</p>,
+            title: "link1",
+            showInHeader: true,
+            showInDrawer: true,
+            showInFooter: false,
           },
-        ]
+        ]}/>,
       },
     ]);
     render(<RouterProvider router={router}></RouterProvider>)
-    expect(screen.getByText('Hello World')).toBeInTheDocument()
-})
+    expect(screen.getByText('title')).toBeInTheDocument()
+    expect(screen.getAllByText('link1')).toHaveLength(2)
+  })
 });
